@@ -15,6 +15,10 @@ gradlePlugin {
 	}
 }
 
+kotlinDslPluginOptions {
+	experimentalWarning.set(false)
+}
+
 repositories {
 	google()
 	jcenter()
@@ -22,7 +26,7 @@ repositories {
 
 dependencies {
 
-	implementation("com.android.tools.build:gradle:4.1.1")
+	implementation("com.android.tools.build:gradle:4.1.3")
 	implementation(kotlin("gradle-plugin", "1.4.21"))
 
 	implementation("org.jacoco:org.jacoco.core:0.8.5")
