@@ -45,7 +45,7 @@ internal class KtlintPlugin : CompositePlugin {
 		target.tasks.register("ktlint", JavaExec::class.java) {
 			dependsOn(project.tasks["check"])
 			inputs.files(inputFiles)
-			outputs.files("${reportPath}")
+			outputs.files(reportPath)
 
 			group = "verification"
 			description = "Check Kotlin code style."

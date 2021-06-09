@@ -1,10 +1,11 @@
 import dependencies.Libs
 import dependencies.Test
+import plugins.`module-plugin`
 
 plugins {
 	id("com.android.application")
 	id("dagger.hilt.android.plugin")
-	id("module-plugin")
+	`module-plugin`
 }
 
 android {
