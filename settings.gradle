@@ -2,3 +2,4 @@ include ':features:cryptocurrency'
 include ':commons:network'
 include ':app'
 rootProject.name = "android-dagger-modular"
+include ':core'
