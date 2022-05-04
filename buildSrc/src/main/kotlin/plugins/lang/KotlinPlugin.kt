@@ -42,7 +42,7 @@ class KotlinPlugin : CompositePlugin {
 	private fun settJvmTarget(target: Project) {
 		target.tasks.withType<KotlinCompile> {
 			kotlinOptions {
-				jvmTarget = JavaVersion.VERSION_1_8.toString()
+				jvmTarget = JavaVersion.VERSION_11.toString()
 			}
 		}
 	}

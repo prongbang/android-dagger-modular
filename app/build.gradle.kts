@@ -23,7 +23,7 @@ dependencies {
 	implementation(Libs.AndroidX.LifeCycle.runtime)
 	implementation(Libs.Dagger.Hilt.android)
 	implementation(Libs.Dagger.Hilt.jetPack)
-	implementation("com.google.android.material:material:1.3.0")
+	implementation("com.google.android.material:material:1.5.0")
 
 	kapt(Libs.Dagger.Hilt.androidCompiler)
 	kapt(Libs.Dagger.Hilt.jetPackCompiler)

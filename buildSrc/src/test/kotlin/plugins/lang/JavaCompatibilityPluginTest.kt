@@ -20,8 +20,8 @@ class JavaCompatibilityPluginTest {
 
 		project.extensions.findByType(JavaPluginExtension::class.java)
 				?.let {
-					assertThat(it.sourceCompatibility).isEqualTo(JavaVersion.VERSION_1_8)
-					assertThat(it.targetCompatibility).isEqualTo(JavaVersion.VERSION_1_8)
+					assertThat(it.sourceCompatibility).isEqualTo(JavaVersion.VERSION_11)
+					assertThat(it.targetCompatibility).isEqualTo(JavaVersion.VERSION_11)
 				}
 	}
 
@@ -34,8 +34,8 @@ class JavaCompatibilityPluginTest {
 
 		project.extensions.findByType(JavaPluginExtension::class.java)
 				?.let {
-					assertThat(it.sourceCompatibility).isEqualTo(JavaVersion.VERSION_1_8)
-					assertThat(it.targetCompatibility).isEqualTo(JavaVersion.VERSION_1_8)
+					assertThat(it.sourceCompatibility).isEqualTo(JavaVersion.VERSION_11)
+					assertThat(it.targetCompatibility).isEqualTo(JavaVersion.VERSION_11)
 				}
 	}
 
@@ -50,9 +50,9 @@ class JavaCompatibilityPluginTest {
 		project.extensions.findByType(BaseExtension::class.java)
 				?.let {
 					assertThat(it.compileOptions.sourceCompatibility).isEqualTo(
-							JavaVersion.VERSION_1_8)
+							JavaVersion.VERSION_11)
 					assertThat(it.compileOptions.targetCompatibility).isEqualTo(
-							JavaVersion.VERSION_1_8)
+							JavaVersion.VERSION_11)
 				}
 	}
 

@@ -18,8 +18,8 @@ internal class AndroidPlugin : CompositePlugin {
 
 		androidExtension.defaultConfig {
 
-			targetSdkVersion(SDK_TARGET_VERSION)
-			minSdkVersion(SDK_MIN_VERSION)
+			targetSdk = SDK_TARGET_VERSION
+			minSdk = SDK_MIN_VERSION
 
 			testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -29,7 +29,7 @@ internal class AndroidPlugin : CompositePlugin {
 	}
 
 	companion object {
-		private const val SDK_COMPILE_VERSION = 30
+		private const val SDK_COMPILE_VERSION = 31
 		private const val BUILD_TOOLS_VERSION = "30.0.3"
 		private const val SDK_TARGET_VERSION = SDK_COMPILE_VERSION
 		private const val SDK_MIN_VERSION = 21

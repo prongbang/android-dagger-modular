@@ -18,15 +18,15 @@ internal class JavaCompatibilityPlugin : CompositePlugin {
 
 		target.extensions.findByType(BaseExtension::class.java)?.let { androidExtension ->
 			androidExtension.compileOptions {
-				sourceCompatibility = JavaVersion.VERSION_1_8
-				targetCompatibility = JavaVersion.VERSION_1_8
+				sourceCompatibility = JavaVersion.VERSION_11
+				targetCompatibility = JavaVersion.VERSION_11
 			}
 			return@apply
 		}
 
 		target.extensions.findByType(JavaPluginExtension::class.java)?.let { javaExtension ->
-			javaExtension.sourceCompatibility = JavaVersion.VERSION_1_8
-			javaExtension.targetCompatibility = JavaVersion.VERSION_1_8
+			javaExtension.sourceCompatibility = JavaVersion.VERSION_11
+			javaExtension.targetCompatibility = JavaVersion.VERSION_11
 			return@apply
 		}
 

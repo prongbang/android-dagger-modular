@@ -15,7 +15,7 @@ class KotlinPluginTest {
 		project.plugins.apply(KotlinPlugin::class.java)
 
 		project.extensions.findByType(KotlinJvmOptions::class.java)?.let {
-			Truth.assertThat(it.jvmTarget).isEqualTo(JavaVersion.VERSION_1_8.toString())
+			Truth.assertThat(it.jvmTarget).isEqualTo(JavaVersion.VERSION_11.toString())
 		}
 	}
 

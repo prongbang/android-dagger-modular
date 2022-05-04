@@ -16,6 +16,7 @@ class ModulePlugin : Plugin<Project> {
 			.appendNext(next = AndroidPlugin())
 			.appendNext(next = CoveragePlugin())
 			.appendNext(next = KtlintPlugin())
+			.appendNext(next = FlavorPlugin())
 
 	override fun apply(project: Project) = plugin.apply(project)
 }

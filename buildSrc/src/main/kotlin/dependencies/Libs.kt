@@ -2,9 +2,9 @@ package dependencies
 
 object Libs {
 
-	const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.21"
+	const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31"
 
-	const val okHttp = "com.squareup.okhttp3:okhttp:$4.7.2"
+	const val okHttp = "com.squareup.okhttp3:okhttp:4.7.2"
 
 	const val appStartUp = "androidx.startup:startup-runtime:1.0.0"
 
@@ -25,21 +25,20 @@ object Libs {
 		const val core = "com.github.bumptech.glide:glide:$glideVersion"
 		const val compiler = "com.github.bumptech.glide:compiler:$glideVersion"
 		const val recyclerView = "com.github.bumptech.glide:recyclerview-integration:$glideVersion"
-
 	}
 
 	object AndroidX {
-		const val appCompat = "androidx.appcompat:appcompat:1.2.0"
-		const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
+		const val appCompat = "androidx.appcompat:appcompat:1.4.1"
+		const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
 
 		object Ktx {
-			const val core = "androidx.core:core-ktx:1.3.2"
-			const val fragment = "androidx.fragment:fragment-ktx:$1.2.5"
-			const val activity = "androidx.activity:activity-ktx:1.1.0"
+			const val core = "androidx.core:core-ktx:1.7.0"
+			const val fragment = "androidx.fragment:fragment-ktx:1.4.1"
+			const val activity = "androidx.activity:activity-ktx:1.4.0"
 		}
 
 		object LifeCycle {
-			private const val lifeCycleVersion = "2.2.0"
+			private const val lifeCycleVersion = "2.4.1"
 			const val runtime =  "androidx.lifecycle:lifecycle-runtime-ktx:$lifeCycleVersion"
 			const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleVersion"
 			const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleVersion"
@@ -47,16 +46,15 @@ object Libs {
 		}
 
 		object Room {
-			internal const val version = "2.2.6"
+			internal const val version = "2.4.2"
 
 			const val core = "androidx.room:room-runtime:$version"
 			const val processor = "androidx.room:room-compiler:$version"
 			const val ktx = "androidx.room:room-ktx:$version"
-
 		}
 
 		object Navigation {
-			internal const val version = "2.3.2"
+			internal const val version = "2.4.2"
 
 			const val fragmentKtx = "androidx.navigation:navigation-fragment-ktx:$version"
 			const val uiKtx = "androidx.navigation:navigation-ui-ktx:$version"
@@ -65,20 +63,20 @@ object Libs {
 		}
 
 		object WorkManager {
-			internal const val version = "2.4.0"
+			internal const val version = "2.7.1"
 
 			const val coreKtx = "androidx.work:work-runtime-ktx:$version"
 		}
 	}
 
 	object Dagger {
-		private const val daggerVersion = "2.30.1"
+		private const val daggerVersion = "2.38.1"
 		const val core = "com.google.dagger:dagger:$daggerVersion"
 		const val compiler = "com.google.dagger:dagger-compiler:$daggerVersion"
 
 		object Hilt {
-			private const val jetPackVersion = "1.0.0-alpha02"
-			private const val version = "2.31-alpha"
+			private const val jetPackVersion = "1.0.0-alpha03"
+			private const val version = "2.38.1"
 
 			const val android = "com.google.dagger:hilt-android:$version"
 			const val core = "com.google.dagger:hilt-core:$version"
