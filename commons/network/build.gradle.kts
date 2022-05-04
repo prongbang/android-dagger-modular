@@ -1,8 +1,7 @@
 import dependencies.Libs
-import plugins.`module-plugin`
 
 plugins {
-	`module-plugin`
+	id("module-plugin")
 }
 
 dependencies {

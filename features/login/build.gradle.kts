@@ -1,18 +1,17 @@
 import dependencies.Libs
 import dependencies.Test
-import plugins.`module-plugin`
 
 plugins {
 	id("com.android.library")
 	id("dagger.hilt.android.plugin")
+	id("org.jetbrains.kotlin.android")
 	id("kotlin-android")
-	`module-plugin`
+	id("module-plugin")
 }
 
 dependencies {
 	implementation(fileTree("dir" to "libs", "include" to listOf("*.jar")))
 	implementation(project(":commons:network"))
-	implementation(Libs.stdlibJdk8)
 	implementation(Libs.Coroutines.core)
 	implementation(Libs.AndroidX.appCompat)
 	implementation(Libs.AndroidX.constraintLayout)
@@ -22,9 +21,6 @@ dependencies {
 	implementation(Libs.AndroidX.LifeCycle.runtime)
 	implementation(Libs.Dagger.Hilt.jetPack)
 	implementation(Libs.Dagger.Hilt.android)
-	implementation("androidx.appcompat:appcompat:1.3.0")
-	implementation("com.google.android.material:material:1.5.0")
-	implementation("androidx.constraintlayout:constraintlayout:2.1.3")
 	kapt(Libs.Dagger.Hilt.jetPackCompiler)
 	kapt(Libs.Dagger.Hilt.androidCompiler)
 	testImplementation(Test.jUnit)

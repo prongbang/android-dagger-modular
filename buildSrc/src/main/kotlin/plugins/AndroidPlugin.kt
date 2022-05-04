@@ -5,33 +5,37 @@ import org.gradle.api.Project
 
 internal class AndroidPlugin : CompositePlugin {
 
-	override fun apply(target: Project) {
+    override fun apply(target: Project) {
+        val androidExtension = target.extensions.findByName("android")
+        if (androidExtension !is BaseExtension) return
 
-		target.extensions.findByType(BaseExtension::class.java)?.let {
-			applyDefaultConfigurations(it)
-		}
-	}
+        applyDefaultConfigurations(androidExtension)
+    }
 
-	private fun applyDefaultConfigurations(androidExtension: BaseExtension) {
-		androidExtension.compileSdkVersion(SDK_COMPILE_VERSION)
-		androidExtension.buildToolsVersion(BUILD_TOOLS_VERSION)
+    private fun applyDefaultConfigurations(androidExtension: BaseExtension) {
+        androidExtension.compileSdkVersion(SDK_COMPILE_VERSION)
+        androidExtension.buildToolsVersion(BUILD_TOOLS_VERSION)
 
-		androidExtension.defaultConfig {
+        androidExtension.defaultConfig {
 
-			targetSdk = SDK_TARGET_VERSION
-			minSdk = SDK_MIN_VERSION
+            targetSdk = SDK_TARGET_VERSION
+            minSdk = SDK_MIN_VERSION
 
-			testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            vectorDrawables.useSupportLibrary = true
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
 
-		}
+        androidExtension.buildFeatures.viewBinding = true
 
-		androidExtension.buildFeatures.viewBinding = true
-	}
+        androidExtension.lintOptions {
+            isAbortOnError = false
+        }
+    }
 
-	companion object {
-		private const val SDK_COMPILE_VERSION = 31
-		private const val BUILD_TOOLS_VERSION = "30.0.3"
-		private const val SDK_TARGET_VERSION = SDK_COMPILE_VERSION
-		private const val SDK_MIN_VERSION = 21
-	}
+    companion object {
+        private const val SDK_COMPILE_VERSION = 31
+        private const val BUILD_TOOLS_VERSION = "30.0.3"
+        private const val SDK_TARGET_VERSION = SDK_COMPILE_VERSION
+        private const val SDK_MIN_VERSION = 21
+    }
 }

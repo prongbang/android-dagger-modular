@@ -1,9 +1,9 @@
 import dependencies.Libs
-import plugins.`module-plugin`
 
 plugins {
 	id("com.android.library")
-	`module-plugin`
+	id("org.jetbrains.kotlin.android")
+	id("module-plugin")
 }
 
 dependencies {

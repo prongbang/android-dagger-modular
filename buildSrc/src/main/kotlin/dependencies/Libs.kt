@@ -2,7 +2,7 @@ package dependencies
 
 object Libs {
 
-	const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31"
+	const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21"
 
 	const val okHttp = "com.squareup.okhttp3:okhttp:4.7.2"
 
@@ -25,6 +25,15 @@ object Libs {
 		const val core = "com.github.bumptech.glide:glide:$glideVersion"
 		const val compiler = "com.github.bumptech.glide:compiler:$glideVersion"
 		const val recyclerView = "com.github.bumptech.glide:recyclerview-integration:$glideVersion"
+	}
+
+	object Airbnb {
+		const val deeplinkDispatch = "com.airbnb:deeplinkdispatch:6.1.0"
+		const val deeplinkDispatchProcessor = "com.airbnb:deeplinkdispatch-processor:6.1.0"
+	}
+
+	object Android {
+		const val material = "com.google.android.material:material:1.5.0"
 	}
 
 	object AndroidX {
@@ -66,6 +75,17 @@ object Libs {
 			internal const val version = "2.7.1"
 
 			const val coreKtx = "androidx.work:work-runtime-ktx:$version"
+		}
+
+		object Hilt {
+			const val common = "androidx.hilt:hilt-common:1.0.0"
+			const val commonCompiler = "androidx.hilt:hilt-compiler:1.0.0"
+			const val navigationFragment = "androidx.hilt:hilt-navigation-fragment:1.0.0"
+			const val work = "androidx.hilt:hilt-work:1.0.0"
+		}
+
+		object Broadcast {
+			const val manager = "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
 		}
 	}
 

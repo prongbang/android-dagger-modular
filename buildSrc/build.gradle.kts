@@ -32,6 +32,6 @@ dependencies {
 	implementation("org.jacoco:org.jacoco.core:0.8.5")
 
 	testImplementation(gradleTestKit())
-	testImplementation("junit:junit:4.13")
+	testImplementation("junit:junit:4.13.2")
 	testImplementation("com.google.truth:truth:1.0.1")
 }

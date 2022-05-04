@@ -1,6 +1,8 @@
-include ':features:cryptocurrency'
-include ':commons:network'
-include ':app'
 rootProject.name = "android-dagger-modular"
+include ':app'
 include ':core'
+include ':commons:network'
+include ':deeplink'
+include ':features:cryptocurrency'
 include ':features:login'
+include ':features:promotion'

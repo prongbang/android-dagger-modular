@@ -6,5 +6,5 @@ import org.gradle.plugin.use.PluginDependencySpec
 
 internal fun Project.reportPath() = "$buildDir/reports"
 
-val PluginDependenciesSpec.`module-plugin`: PluginDependencySpec
+val PluginDependenciesSpec.modulePlugin: PluginDependencySpec
 	get() = id("module-plugin")

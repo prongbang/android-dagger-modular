@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	package="com.prongbang.adm">
 
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +12,22 @@
 		android:label="@string/app_name"
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
-		android:theme="@style/Theme.Androiddaggermodular">
+		android:theme="@style/Theme.AndroidDaggerModular">
+		<activity
+			android:name="com.prongbang.deeplink.presentation.DeepLinkActivity"
+			android:exported="true"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.NoDisplay"
+			tools:ignore="LockedOrientationActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<data android:scheme="${DEEPLINK_SCHEME}" />
+			</intent-filter>
+		</activity>
 		<activity
 			android:name=".MainActivity"
 			android:exported="true">
